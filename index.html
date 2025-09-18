@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riffy - Music Lover App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="RIFFY.png">
+      <span>Riffy</span>
+    </div>
+    <input type="text" id="search" placeholder="🔍 Search songs..." onkeyup="searchSongs()">
+  </nav>
+
+  <!-- Floating Music Notes -->
+  <div class="note" style="left:10%">🎵</div>
+  <div class="note" style="left:30%">🎶</div>
+  <div class="note" style="left:50%">🎼</div>
+  <div class="note" style="left:70%">🎸</div>
+  <div class="note" style="left:90%">🎧</div>
+
+  <div class="container">
+    <h1 id="title">🎶 Music Playlist</h1>
+
+    <!-- Language Selection -->
+    <select id="language" onchange="changeLanguage()">
+      <option value="En">English</option>
+      <option value="Hi">हिन्दी</option>
+      <option value="Te">తెలుగు</option>
+      <option value="Ta">தமிழ்</option>
+    </select>
+
+    <!-- Mood Filter -->
+    <select id="mode" onchange="filterSongs()">
+      <option value="all">All Songs</option>
+      <option value="sad">Sad</option>
+      <option value="melody">Melody</option>
+      <option value="party">Party</option>
+    </select>
+
+    <!-- Playlist -->
+    <ul id="playlist"></ul>
+
+    <!-- Player -->
+    <div class="player">
+      <p id="nowPlaying">Not Playing</p>
+      <audio id="audioPlayer" controls autoplay></audio>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
